@@ -7,8 +7,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: .3fr .3fr .3fr;
-  grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr .3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
   "header header card1"
   "card2 card2 card2"
@@ -18,14 +18,16 @@ body {
   "card6 card6 card6"
   "card7 card7 card7"
   "card8 card8 card8"
-  "card9 card9 card9";}
+  "card9 card9 card9";
+  height: 400px;
+  padding:50px;}
 
 .header {
   grid-area:header;
 }
 
 .header h1{
-  margin-left:450px;
+  margin-left:250px;
   font-size: 48px;
   color: #4E2A84;
 
@@ -37,12 +39,19 @@ body {
   font-size:20px;
 }
 
+section {
+  border-top: solid 20px;
+  border-bottom: solid 20px;
+}
+
 .card1{
   grid-area:card1;
+  border-top: solid 0px;
+  border-bottom: solid 0px;
 }
 
 .card1 h1{
-  margin-left:140px;
+  margin-left:200px;
   font-size:40px;
 }
 
@@ -54,9 +63,11 @@ body {
   grid-area:card2;
 }
 
-.card2 h1 {
-  margin-left:140px;
-  font-size:40px;
+.card2 h1{
+  margin-left:450px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 .card2 p {
@@ -68,40 +79,92 @@ body {
   grid-area:card3;
 }
 
-.card3 h1 {
-  margin-left:140px;
-  font-size:40px;
+.card3 h1{
+  margin-left:350px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 .card3 p{
   margin-left:40px;
-  font-size:18px;
+  font-size:24px;
 }
 
-.card4{
+.card4 {
   grid-area:card4;
+  font-size:24px;
+}
+
+.card4 h1{
+    margin-left:300px;
+    font-size: 48px;
+    color: #4E2A84;
+
+  }
+
 }
 
 .card5{
   grid-area:card5;
+  font-size:24px;
+}
+
+.card5 h1{
+  margin-left:250px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 .card6{
   grid-area:card6;
   padding:40px;
+  font-size:24px;
+
+}
+
+.card6 h1{
+  margin-left:200px;
+  font-size: 48px;
+  color: #4E2A84;
 
 }
 
 .card7{
   grid-area:card7;
+  font-size:24px;
+}
+
+.card7 h1{
+  margin-left:400px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 .card8{
   grid-area:card8;
+  font-size:24px;
+}
+
+.card8 h1{
+  margin-left:350px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 .card9{
   grid-area:card9;
+  font-size:24px;
+}
+
+.card9 h1{
+  margin-left:300px;
+  font-size: 48px;
+  color: #4E2A84;
+
 }
 
 
@@ -113,6 +176,7 @@ img{
   width: 300px;
   height:300px;
   border: solid 1px;
+  margin-left: 400px;
 
   border-color: #000000;
 }
@@ -153,6 +217,7 @@ legend{
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left:50px;
 }
 
 /* Dropdown Content (Hidden by Default) */

@@ -1,10 +1,16 @@
-const myAPIEndpoint = 'https://wildside-nu.herokuapp.com/merchandise';
-const addNewUser = () => {
+const myAPIEndpoint = 'https://wildside-nu.herokuapp.com/votes';
+const addVote = (ev) => {
     // 1. get user-generated data:
     const student_id = document.querySelector('#student_id').value;
-    const radioa = document.querySelector('#radioa').value;
-    const radiob = document.querySelector('#radiob').value;
-    const radioc = document.querySelector('#radioc').value;
+    let vote = null;
+    const radios = document.getElementsByName('Field5');
+    for (radio of radios) {
+      if (radio.checked) {
+        vote = radio.value
+        break;
+      }
+    }
+    alert(vote);
 
 
     // 2. post it to the endpoint:
@@ -16,9 +22,7 @@ const addNewUser = () => {
         },
         body: JSON.stringify({
             "student_id": student_id,
-            "radioa": radioa,
-            "radiob": radiob,
-            "radioc": radioc,
+            "vote": vote
 
 
 
@@ -29,10 +33,11 @@ const addNewUser = () => {
         // 3. print the results to the screen
         console.log(data);
     });
+    ev.preventDefault();
 };
 
 // 4. attach function to button:
-document.querySelector('saveForm').onclick = addNewUser;
+document.querySelector('#saveForm').onclick = addVote;
 
 
 
